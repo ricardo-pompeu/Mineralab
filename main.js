@@ -1,3 +1,6 @@
+import "/scripts.js";
+
+
 const finishUrl = "/Inicio.html";
 
 const cards = document.getElementById("cards");

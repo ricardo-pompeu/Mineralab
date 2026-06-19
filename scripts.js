@@ -64,3 +64,30 @@ document.addEventListener("DOMContentLoaded", () => {
 
     toggleButton();
 });
+
+
+
+document.addEventListener("DOMContentLoaded", () => {
+    const root = document.documentElement;
+
+    // 🌙 Aplica tema salvo (ou padrão light)
+    const savedTheme = localStorage.getItem("theme") || "light";
+    root.setAttribute("data-theme", savedTheme);
+
+    // 🔧 Função central de aplicação de tema
+    function applyTheme(theme) {
+        root.setAttribute("data-theme", theme);
+        localStorage.setItem("theme", theme);
+    }
+
+    // 🔘 Toggle automático (se existir botão na página)
+    const toggleThemeButton = document.getElementById("toggle-theme");
+
+    if (toggleThemeButton) {
+        toggleThemeButton.addEventListener("click", () => {
+            const currentTheme = root.getAttribute("data-theme");
+            const newTheme = currentTheme === "dark" ? "light" : "dark";
+            applyTheme(newTheme);
+        });
+    }
+});

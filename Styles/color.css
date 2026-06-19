@@ -1,6 +1,7 @@
+/*
+
 :root {
 
-    /* LIGHT MODE */
 
     --bg-primary: #f5fbf3;
     --bg-secondary: #d9e6da;
@@ -21,7 +22,6 @@
     --btn-nao-act: #ba2d3a;
 
 
-    /* DARK MODE */
 
     --bg-primary: #f5fbf3;
     --bg-secondary: #d9e6da;
@@ -44,5 +44,52 @@
 
     --transition-main: all 0.6s ease-in-out;
 
+
+}
+
+
+*/
+
+
+:root {
+    --bg-primary: #f6fafa;
+    --bg-secondary: #eaefee;
+
+    --text-primary: #171c1d;
+    --text-secondary: #3d4949;
+    --text-link: #269da2;
+
+    --circle-color: #dfe3e3;
+    --circle-color-act: #0000003d;
+
+    --button-color: #269da2;
+    --button-act: #269da2;
+
+    --btn-sim: #26a269;
+    --btn-sim-act: #269da2;
+    --btn-nao: #a2265f;
+    --btn-nao-act: #a2265f;
+}
+
+
+
+[data-theme="dark"] {
+    --bg-primary: #0f1511;
+    --bg-secondary: #1b211d;
+
+    --text-primary: #dee4dd;
+    --text-secondary: #bdcabe;
+    --text-link: #269da2;
+
+    --circle-color: #ffffff1f;
+    --circle-color-act: #ffffff3d;
+
+    --button-color: #269da2;
+    --button-act: #269da2;
+
+    --btn-sim: #269da2;
+    --btn-sim-act: #269da2;
+    --btn-nao: #a2265f;
+    --btn-nao-act: #a2265f;
 }
 
