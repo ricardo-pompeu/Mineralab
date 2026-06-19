@@ -1,0 +1,48 @@
+:root {
+
+    /* LIGHT MODE */
+
+    --bg-primary: #f5fbf3;
+    --bg-secondary: #d9e6da;
+
+    --text-primary: #171d19;
+    --text-secondary: #3e4a41;
+    --text-link: #008653;
+
+    --circle-color: #0000001f;
+    --circle-color-act: #0000003d;
+
+    --button-color: #008653;
+    --button-act: #339e75;
+
+    --btn-sim: #008653;
+    --btn-sim-act: #008653;
+    --btn-nao: #ba2d3a;
+    --btn-nao-act: #ba2d3a;
+
+
+    /* DARK MODE */
+
+    --bg-primary: #f5fbf3;
+    --bg-secondary: #d9e6da;
+
+    --text-primary: #171d19;
+    --text-secondary: #3e4a41;
+    --text-link: #008653;
+
+    --circle-color: #0000001f;
+    --circle-color-act: #0000003d;
+
+    --button-color: #008653;
+    --button-act: #339e75;
+
+    --btn-sim: #008653;
+    --btn-sim-act: #008653;
+    --btn-nao: #ba2d3a;
+    --btn-nao-act: #ba2d3a;
+    
+
+    --transition-main: all 0.6s ease-in-out;
+
+}
+

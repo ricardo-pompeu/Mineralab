@@ -1,0 +1,715 @@
+@import url("/Styles/color.css");
+
+/* =========================
+   RESET
+========================= */
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-size: 18px;
+}
+
+body {
+    min-height: 80vh;
+    font-family: Rubik, sans-serif;
+    background: var(--bg-primary);
+    justify-content: center;
+}
+
+/* =========================
+   CONTAINER
+========================= */
+
+.container {
+    width: 100%;
+    max-width: 100vw;
+    min-height: 100%;
+    background: var(--bg-primary);
+    display: grid;
+}
+
+/* =========================
+   HEADER
+========================= */
+
+.hero {
+    height: 400px;
+    background: var(--bg-secondary);
+}
+
+.hero-min {
+    background: var(--bg-secondary);
+
+}
+
+.hero-content {
+    width: 100%;
+    height: 100%;
+    padding: 12px;
+
+    background: url(/Src/image12.svg);
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+
+
+}
+
+.hero-text {
+    display: flex;
+    justify-content:space-between;
+
+    background-color: #00000000;
+    padding: 12px;
+}
+
+.hero-text p {
+    margin: 0;
+}
+
+.hero-text-fix {
+    display: flex;
+    justify-content: space-between;
+    background-color: var(--bg-secondary);
+    padding: 36px;
+    position: fixed;
+    width: 100%;
+    left: 0;
+    top: 0;
+    padding-top: 36px;
+}
+
+
+
+
+
+
+.hero-text-bottom {
+    display: flex;
+
+    background-color: #00000000;
+    padding: 12px;
+    justify-content: space-between;
+}
+
+.hero-text-bottom-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+
+    background-color: #00000000;
+    padding: 12px;
+    justify-content: space-between;
+}
+
+.hero-content-nav-bottom {
+    display: flex;
+    gap: 24px;
+}
+
+
+
+.hero-card {
+    background: var(--bg-secondary);
+    padding: 24px;
+    border-radius: 24px;
+    height: 240px;
+}
+
+
+
+
+
+
+textarea {
+    width: 100%;
+    min-height: 100px;
+    padding: 24px;
+    font-size: 16px;
+    box-sizing: border-box;
+    resize: none;      /* impede redimensionamento manual */
+    overflow: hidden;  /* esconde a barra de rolagem */
+
+
+    border-radius: 24px;
+    border: 0;
+    background: var(--bg-secondary);
+
+
+
+}
+
+
+
+
+
+.hero-text h3, h3 {
+    font-size: 1.2em;
+    font-weight: 700;
+    color: var(--text-primary);
+}
+
+.hero-text-fix h3 {
+    font-size: 1.2em;
+    font-weight: 700;
+    color: var(--text-primary);
+    margin-bottom: 6px;
+}
+
+.hero-text p {
+    font-size: 1rem;
+    color: var(--text-secondary);
+}
+
+.circle {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    background: var(--circle-color);
+
+    cursor: pointer;
+    transition: all 0.03s ease;
+
+}
+
+.circle:active {
+   background-color: #00000033;
+
+}
+
+
+
+
+#returnUp-fix {
+    position: fixed;
+    bottom: 24px;
+    right: 24px;
+
+    background: var(--btn-sim);
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+#returnUp-fix i {
+    color: var(--bg-primary);
+}
+
+#returnUp-fix.show {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+}
+
+
+
+
+
+
+
+
+.circle-btn-sim, .circle-btn-nao {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    background: var(--circle-color);
+
+    cursor: pointer;
+    transition: all 0.3s ease;
+
+}
+
+
+.circle-btn-sim {
+    background: var(--btn-sim);
+    color: var(--bg-primary);
+}
+
+.circle-btn-nao {
+    background: var(--btn-nao);
+    color: var(--bg-primary);
+}
+
+.circle-btn-sim i {
+    color: var(--bg-primary);
+}
+
+.circle-btn-nao i {
+    color: var(--bg-primary);
+}
+
+.circle-btn-nao:active, .circle-btn-sim:active {
+    transform: scale(0.8);
+}
+
+
+
+.circle:active {
+    transform: scale(0.88);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+/* =========================
+   MAIN
+========================= */
+
+.main-content {
+    display: grid;
+}
+
+/* =========================
+   WELCOME SECTION
+========================= */
+
+
+
+.section-card-exp {
+    display: flex;
+    flex-direction: column;
+}
+
+
+
+
+
+
+
+
+
+
+.welcome-section {
+    display: flex;
+    justify-content: center;
+
+    padding: 24px;
+    height: 240px;
+
+}
+
+.welcome-card-section {
+    display: flex;
+    flex-direction: column;
+    padding: 24px;
+    gap: 24px;
+
+    height: 520px;
+
+}
+
+.welcome-card {
+    text-align: left;
+}
+
+
+
+.welcome-card-expl {
+    text-align: center;
+    transition: all 0.3s ease;
+}
+
+.welcome-card-expl:active {
+    text-align: center;
+    transform: scale(0.92);
+}
+
+.welcome-card-pt {
+    text-align: justify;
+}
+
+.welcome-card-tr {
+    text-align: justify;
+}
+
+.welcome-card-progress-bar {
+    height: 12px;
+    width: 100%;
+    background: var(--bg-secondary);
+    border-radius: 24px;
+}
+
+.welcome-card-progress-bar-active-10 {
+    height: 12px;
+    width: 10%;
+    background: var(--text-primary);
+    border-radius: 24px;
+}
+
+.welcome-card-progress-bar-active-20 {
+    height: 12px;
+    width: 20%;
+    background: var(--text-primary);
+    border-radius: 24px;
+}
+
+.welcome-card-progress-bar-active-30 {
+    height: 6px;
+    width: 40%;
+    background: var(--text-primary);
+    border-radius: 24px;
+}
+
+.welcome-card-progress-bar-active-40 {
+    height: 6px;
+    width: 40%;
+    background: var(--text-primary);
+    border-radius: 24px;
+}
+
+.welcome-card-progress-bar-active-40 {
+    height: 6px;
+    width: 40%;
+    background: var(--text-primary);
+    border-radius: 24px;
+}
+
+.welcome-card-progress-bar-active-40 {
+    height: 6px;
+    width: 40%;
+    background: var(--text-primary);
+    border-radius: 24px;
+}
+
+.welcome-card-progress-bar-active-40 {
+    height: 6px;
+    width: 40%;
+    background: var(--text-primary);
+    border-radius: 24px;
+}
+
+
+
+
+.welcome-card-progress-bar-active-40 {
+    height: 6px;
+    width: 40%;
+    background: var(--text-primary);
+    border-radius: 24px;
+}
+
+
+
+
+
+.welcome-card h1, h1 {
+    font-size: 2em;
+    font-weight: 800;
+    color: var(--text-primary);
+    margin-bottom: 1rem;
+}
+
+.welcome-card p, p {
+    margin-top: 1rem;
+    font-size: 1em;
+    line-height: 1.4;
+    color: var(--text-secondary);
+}
+
+/* =========================
+   ACTIONS SECTION
+========================= */
+
+.actions-section {
+    padding-inline: 12px;
+}
+
+.btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 12px;
+
+
+    width: 100%;
+    height: 48px;
+    font-weight: bold;
+
+    border: none;
+    border-radius: 48px;
+
+    background: var(--button-color);
+    color: var(--bg-primary);
+    
+
+
+
+    cursor: pointer;
+    transition: all 0.1s ease;
+
+}
+
+
+.btn:active {
+    transform: scale(0.94);
+    background-color: var(--button-act);
+}
+
+.btn i {
+    color: var(--bg-primary);
+}
+
+
+
+i {
+    font-size: 24px;
+    color: var(--text-primary);
+}
+
+a {
+    text-decoration: none;
+
+}
+
+
+.text-links-tr {
+    color: var(--text-link);
+    font-weight: bold;
+}
+
+.text-links-tr:active {
+    text-decoration: underline;
+}
+
+
+
+
+
+
+
+
+
+
+*,
+button,
+a,
+input,
+textarea,
+select {
+  -webkit-tap-highlight-color: transparent;
+  outline: none;
+}
+
+
+
+/* =========================
+   FOOTER
+========================= */
+
+.footer {
+    height: 0px;
+}
+
+/* =========================
+   RESPONSIVIDADE
+========================= */
+
+
+/*
+
+@media (max-width: 480px) {
+
+    .hero-content {
+        padding: 24px 12px;
+    }
+
+    .welcome-card h1 {
+        font-size: 2.4rem;
+    }
+
+    .welcome-card p {
+        font-size: 1rem;
+    }
+
+    .actions-section {
+        padding: 30px 20px;
+    }
+}
+
+*/
+
+
+/*------------------------------------------------------------------------------------------------------------------------------------------------------*/
+
+
+
+
+table {
+    display: flex;
+    border-spacing: 0;
+    overflow-x: auto; /* Permite rolagem horizontal */
+    width: 100%;
+    padding-inline: 36px;
+    padding-bottom: 36px;
+}
+
+td {
+    background: #e8f0e6;
+}
+
+
+td,
+th {
+  border-block-start: 1px solid #bbcabb;
+  border-inline-start: 1px solid #bbcabb;
+  padding: 12px;
+}
+
+tr:last-of-type td,
+tr:last-of-type th {
+  border-block-end: 1px solid #bbcabb;
+}
+
+tr td:last-of-type,
+tr th:last-of-type {
+  border-inline-end: 1px solid #bbcabb;
+}
+
+th {
+  background-color: var(--bg-secondary);
+  color: var(--text-primary);
+  font-size: 1.2em;
+}
+
+
+:not(pre) > code {
+  display: inline-flex;
+  background-color: var(--md-sys-color-surface-variant);
+  text-shadow: 0 1px 1px var(--md-sys-color-surface-variant);
+  color: var(--md-sys-color-on-surface);
+  padding: 4px;
+  border-radius: 8px;
+}
+
+tr th:first-of-type {
+  border-start-start-radius: 24px;
+}
+
+tr th:last-of-type {
+  border-start-end-radius: 24px;
+}
+
+tr:last-of-type td:first-of-type {
+  border-end-start-radius: 24px;
+}
+
+tr:last-of-type td:last-of-type {
+  border-end-end-radius: 24px;
+}
+
+
+
+
+
+/*-------------------------------------------------------------------------------------------------*/
+
+
+
+
+
+
+.sidebar {
+    position: fixed;
+    inset: 0;
+    width: 100%;
+    height: 100vh;
+
+    background: var(--bg-primary);
+
+    z-index: 9999;
+
+    display: flex;
+    flex-direction: column;
+
+    transform: translateX(100%);
+    transition: all 0.6s ease-in-out;
+    
+}
+
+.sidebar {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100vh;
+}
+
+.sidebar.active {
+    transform: translateX(0);
+}
+
+.sidebar .hero-content {
+    background: var(--bg-primary);
+}
+
+
+
+
+
+
+.sidebar .btn {
+    align-self: flex-end;
+}
+
+.sidebar-content {
+    flex: 1;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#sidebar .circle {
+    background: var(--bg-secondary);
+
+}
+
+
+#sidebar .btn {
+    text-align: left;
+    justify-content: left;
+    padding-inline: 24px;
+
+    background: var(--bg-secondary);
+    color: var(--text-primary);
+
+}
+
+#sidebar .btn i {
+    color: var(--text-primary);
+
+}
+
+
+
+
+
+
+
+
+
+/*------------------------------------------------------------------------------*/
+
+
