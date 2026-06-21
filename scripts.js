@@ -20,18 +20,6 @@ if (openSidebar && closeSidebar && sidebar) {
 // Auto resize textarea
 // =========================
 
-const textarea = document.getElementById("texto");
-
-if (textarea) {
-    function ajustarAltura() {
-        textarea.style.height = "160px";
-        textarea.style.height = textarea.scrollHeight + "px";
-    }
-
-    textarea.addEventListener("input", ajustarAltura);
-    ajustarAltura();
-}
-
 // =========================
 // Botão voltar ao topo
 // =========================

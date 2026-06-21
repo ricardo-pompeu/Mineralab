@@ -53,29 +53,34 @@ function updateCarousel() {
 
 
 const nextIcon = document.getElementById("nextIcon");
-const prevtIcon = document.getElementById("prevtIcon");
+const prevIcon = document.getElementById("prevIcon");
 
 
 function updateButtons() {
 
-  prevBtn.style.transition = "all 0.3s ease-in-out";
-  
-  nextBtn.style.transition = "all 0.3s ease-in-out";
+  prevIcon.style.transition = "all 0.6s ease-in-out";
+  nextIcon.style.transition = "all 0.6s ease-in-out";
 
-  prevtIcon.style.color = index === 0 ? "#f5fbf3" : "#171d19";
-  prevBtn.style.background = "#d9e6da";
+  prevIcon.style.color = index === 0 ? "var(--bg-primary)" : "var(--text-primary)";
+
+  prevBtn.style.background = "var(--bg-teary)";
+  nextBtn.style.background = "var(--bg-teary)";
 
   if (index === totalCards - 1) {
     nextIcon.className = "ph-bold ph-check";
-    nextBtn.style.background = "#006d3a";
-    nextIcon.style.color = "#e8eee7";
+    nextBtn.style.background = "var(--button-color)";
+    
+    nextIcon.style.color = "var(--bg-primary)";
 
   } else {
     nextIcon.className = "ph-bold ph-arrow-right";
-    nextIcon.style.color = "#161d17";
-    nextBtn.style.background = "#d9e6da";
+
+    nextIcon.style.color = "var(--text-primary)";
+
+    nextBtn.style.background = "var(--bg-teary)";
   }
 }
+
 
 
 // ===== BOTÕES =====
@@ -183,3 +188,11 @@ cards.addEventListener("dragstart", (e) => e.preventDefault());
 
 // init
 updateCarousel();
+
+
+
+
+
+
+
+

@@ -1,74 +1,22 @@
-/*
-
 :root {
-
-
     --bg-primary: #f5fbf3;
-    --bg-secondary: #d9e6da;
+    --bg-secondary: #e9f0e8;
+    --bg-teary: #d9e6da;
 
     --text-primary: #171d19;
-    --text-secondary: #3e4a41;
-    --text-link: #008653;
+    --text-secondary: #171d19;
+    --text-link: #005c38;
 
-    --circle-color: #0000001f;
-    --circle-color-act: #0000003d;
+    --circle-color: #0000000c;
+    --circle-color-act: #00000018;
 
-    --button-color: #008653;
-    --button-act: #339e75;
+    --button-color: #005c38;
+    --button-act: #005c38;
 
-    --btn-sim: #008653;
-    --btn-sim-act: #008653;
-    --btn-nao: #ba2d3a;
-    --btn-nao-act: #ba2d3a;
-
-
-
-    --bg-primary: #f5fbf3;
-    --bg-secondary: #d9e6da;
-
-    --text-primary: #171d19;
-    --text-secondary: #3e4a41;
-    --text-link: #008653;
-
-    --circle-color: #0000001f;
-    --circle-color-act: #0000003d;
-
-    --button-color: #008653;
-    --button-act: #339e75;
-
-    --btn-sim: #008653;
-    --btn-sim-act: #008653;
-    --btn-nao: #ba2d3a;
-    --btn-nao-act: #ba2d3a;
-    
-
-    --transition-main: all 0.6s ease-in-out;
-
-
-}
-
-
-*/
-
-
-:root {
-    --bg-primary: #f6fafa;
-    --bg-secondary: #eaefee;
-
-    --text-primary: #171c1d;
-    --text-secondary: #3d4949;
-    --text-link: #269da2;
-
-    --circle-color: #dfe3e3;
-    --circle-color-act: #0000003d;
-
-    --button-color: #269da2;
-    --button-act: #269da2;
-
-    --btn-sim: #26a269;
-    --btn-sim-act: #269da2;
-    --btn-nao: #a2265f;
-    --btn-nao-act: #a2265f;
+    --btn-sim: #005c38;
+    --btn-sim-act: #005c38;
+    --btn-nao: #86001b;
+    --btn-nao-act: #86001b;
 }
 
 
@@ -77,19 +25,26 @@
     --bg-primary: #0f1511;
     --bg-secondary: #1b211d;
 
+    --bg-teary: #3e4a41;
+
     --text-primary: #dee4dd;
-    --text-secondary: #bdcabe;
-    --text-link: #269da2;
+    --text-secondary: #dee4dd;
+    --text-link: #69dc9d;
 
-    --circle-color: #ffffff1f;
-    --circle-color-act: #ffffff3d;
+    --circle-color: #ffffff0c;
+    --circle-color-act: #ffffff18;
 
-    --button-color: #269da2;
-    --button-act: #269da2;
+    --button-color: #69dc9d;
+    --button-act: #69dc9d;
 
-    --btn-sim: #269da2;
-    --btn-sim-act: #269da2;
-    --btn-nao: #a2265f;
-    --btn-nao-act: #a2265f;
+    --btn-sim: #69dc9d;
+    --btn-sim-act: #69dc9d;
+    --btn-nao: #ffb3b2;
+    --btn-nao-act: #ffb3b2;
+
+
+
+
+    
 }
 

@@ -65,6 +65,17 @@ body {
     padding: 12px;
 }
 
+.hero-text .circle {
+    background: #0000000C;
+
+}
+
+
+
+
+
+
+
 .hero-text p {
     margin: 0;
 }
@@ -112,7 +123,7 @@ body {
 
 
 .hero-card {
-    background: var(--bg-secondary);
+    background: var(--bg-teary);
     padding: 24px;
     border-radius: 24px;
     min-height: 200px;
@@ -171,7 +182,7 @@ textarea {
     width: 48px;
     height: 48px;
     border-radius: 50%;
-    background: var(--circle-color);
+    background: var(--bg-teary);
 
     cursor: pointer;
     transition: all 0.03s ease-in-out;
@@ -345,7 +356,7 @@ textarea {
 .welcome-card-progress-bar {
     height: 12px;
     width: 100%;
-    background: var(--bg-secondary);
+    background: var(--bg-teary);
     border-radius: 24px;
 }
 
@@ -364,8 +375,8 @@ textarea {
 }
 
 .welcome-card-progress-bar-active-30 {
-    height: 6px;
-    width: 40%;
+    height: 12px;
+    width: 50%;
     background: var(--text-primary);
     border-radius: 24px;
 }
@@ -387,14 +398,14 @@ textarea {
 .welcome-card-progress-bar-active-40 {
     height: 6px;
     width: 40%;
-    background: var(--text-primary);
+    background: var(--bg-teary);
     border-radius: 24px;
 }
 
 .welcome-card-progress-bar-active-40 {
     height: 6px;
     width: 40%;
-    background: var(--text-primary);
+    background: var(--text-teary);
     border-radius: 24px;
 }
 
@@ -404,7 +415,7 @@ textarea {
 .welcome-card-progress-bar-active-40 {
     height: 6px;
     width: 40%;
-    background: var(--text-primary);
+    background: var(--text-teary);
     border-radius: 24px;
 }
 
@@ -642,7 +653,7 @@ tr:last-of-type td:last-of-type {
     flex-direction: column;
 
     transform: translateX(100%);
-    transition: all 0.6s ease-in-out;
+    transition: transform 0.6s ease-in-out;
     
 }
 

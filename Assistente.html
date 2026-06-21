@@ -110,7 +110,7 @@
                 <div class="welcome-card-pt">
 
                     <div class="hero-card">
-                        <input id="prompt" placeholder="Digite aqui..."/>
+                        <input id="prompt" id="texto" placeholder="Digite aqui..."/>
                     </div>
 
                 
@@ -123,8 +123,36 @@
 
                 <div class="hero-text-bottom">
                     <div class="hero-text-circlenex">
-                        <button href="" class="circle"> <i class="ph-bold ph-camera"></i>  </button>
-                        <button href="" class="circle"> <i class="ph-bold ph-paperclip"></i>  </button>
+
+
+                        
+<input
+    type="file"
+    id="cameraInput"
+    accept="image/*"
+    capture="environment"
+    style="display:none;"
+>
+
+
+<!-- Input para qualquer arquivo -->
+<input
+    type="file"
+    id="fileInput"
+    style="display:none;"
+>
+
+
+<button type="button" class="circle" onclick="document.getElementById('cameraInput').click()">
+    <i class="ph-bold ph-camera"></i>
+</button>
+
+<button type="button" class="circle" onclick="document.getElementById('fileInput').click()">
+    <i class="ph-bold ph-paperclip"></i>
+</button>
+
+
+
                         
                     </div>
 
@@ -139,7 +167,7 @@
                 <article class="welcome-card-tr">
 
 
-                    <div id="resposta"> Faça uma pergunta. </div>
+                    <div id="resposta"> </div>
 
                 </article>
 
@@ -167,7 +195,24 @@
 
 
 
+<script>
 
+const textarea = document.getElementById("prompt");
+
+if (textarea) {
+    function ajustarAltura() {
+        textarea.style.height = "160px";
+        textarea.style.height = textarea.scrollHeight + "px";
+    }
+
+    textarea.addEventListener("input", ajustarAltura);
+    ajustarAltura();
+}
+
+
+
+
+</script>
 
 
 
@@ -224,12 +269,17 @@ async function enviar(){
 
     }catch(e){
 
-        resposta.innerText = "Erro.";
+        resposta.innerText = "Erro 403";
 
     }
 
 }
 </script>
+
+
+
+
+
 
     
 

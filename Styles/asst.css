@@ -135,14 +135,19 @@ input {
     resize: none;      /* impede redimensionamento manual */
     overflow: hidden;  /* esconde a barra de rolagem */
 
-
     border-radius: 24px;
-    border: 0;
-    background: var(--bg-secondary);
+    border: 1px solid transparent;
+    background: var(--bg-teary);
 
 
 
 }
+
+input:focus {
+    border: 1px solid var(--button-color);
+}
+
+
 
 button {
     border: none;

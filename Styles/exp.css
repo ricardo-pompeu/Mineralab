@@ -112,15 +112,13 @@ body {
 
 .hero-card {
     display: flex;
-    background: var(--bg-secondary);
+    background: var(--bg-teary);
     padding: 24px;
     border-radius: 24px;
     text-align: left;
     gap: 12px;
     min-height: 200px;
 }
-
-
 
 
 
@@ -181,7 +179,7 @@ textarea {
 }
 
 .circle:active {
-   background-color: #00000033;
+   background-color: #00000018;
 
 }
 
@@ -326,7 +324,7 @@ textarea {
 
 .hero-card i {
     font-size: 48px;
-    color: var(--button-color);
+    color: var(--text-link);
     padding-right: 6px;
 }
 
@@ -652,7 +650,7 @@ tr:last-of-type td:last-of-type {
     flex-direction: column;
 
     transform: translateX(100%);
-    transition: all 0.6s ease-in-out;
+    transition: transform 0.6s ease-in-out;
     
 }
 
