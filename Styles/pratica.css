@@ -374,48 +374,31 @@ textarea {
     border-radius: 24px;
 }
 
-.welcome-card-progress-bar-active-30 {
+.welcome-card-progress-bar-active-40 {
     height: 12px;
-    width: 50%;
-    background: var(--text-primary);
-    border-radius: 24px;
-}
-
-.welcome-card-progress-bar-active-40 {
-    height: 6px;
     width: 40%;
     background: var(--text-primary);
     border-radius: 24px;
 }
 
-.welcome-card-progress-bar-active-40 {
-    height: 6px;
-    width: 40%;
+.welcome-card-progress-bar-active-60 {
+    height: 12px;
+    width: 60%;
     background: var(--text-primary);
     border-radius: 24px;
 }
 
-.welcome-card-progress-bar-active-40 {
-    height: 6px;
-    width: 40%;
-    background: var(--bg-teary);
+.welcome-card-progress-bar-active-80 {
+    height: 12px;
+    width: 80%;
+    background: var(--text-primary);
     border-radius: 24px;
 }
 
-.welcome-card-progress-bar-active-40 {
-    height: 6px;
-    width: 40%;
-    background: var(--text-teary);
-    border-radius: 24px;
-}
-
-
-
-
-.welcome-card-progress-bar-active-40 {
-    height: 6px;
-    width: 40%;
-    background: var(--text-teary);
+.welcome-card-progress-bar-active-90 {
+    height: 12px;
+    width: 90%;
+    background: var(--text-primary);
     border-radius: 24px;
 }
 

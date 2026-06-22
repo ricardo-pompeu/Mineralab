@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <title>Scanner de Minerais</title>
+  <style>
+    body { font-family: Arial; padding: 20px; }
+    button { padding: 10px 15px; cursor: pointer; }
+    .result { margin-top: 20px; }
+    .file { padding: 5px 0; }
+  </style>
+</head>
+<body>
+
+<h2>🔎 Buscar minerais em arquivos HTML</h2>
+
+<button onclick="scanFolder()">Selecionar pasta</button>
+
+<div class="result" id="result"></div>
+
+<script>
+const namesToFind = [
+  "Actinolita",
+  "Amazonita",
+  "Ambliogonita",
+  "Apatita",
+  "Arsenopirita",
+  "Azurita",
+  "Barita",
+  "Berilo",
+  "Goethita"
+];
+
+async function scanFolder() {
+  const folderHandle = await window.showDirectoryPicker();
+  const resultDiv = document.getElementById("result");
+
+  resultDiv.innerHTML = "🔄 Escaneando...";
+
+  const matchedFiles = [];
+
+  for await (const [name, handle] of folderHandle.entries()) {
+    if (handle.kind === "file" && name.endsWith(".html")) {
+      const file = await handle.getFile();
+      const text = await file.text();
+
+      const found = namesToFind.some(n => text.includes(n));
+
+      if (found) {
+        matchedFiles.push(name);
+      }
+    }
+  }
+
+  if (matchedFiles.length === 0) {
+    resultDiv.innerHTML = "❌ Nenhum arquivo encontrado.";
+    return;
+  }
+
+  resultDiv.innerHTML = "<h3>✅ Arquivos encontrados:</h3>";
+
+  matchedFiles.forEach(file => {
+    const div = document.createElement("div");
+    div.className = "file";
+    div.textContent = "📄 " + file;
+    resultDiv.appendChild(div);
+  });
+}
+</script>
+
+</body>
+</html>

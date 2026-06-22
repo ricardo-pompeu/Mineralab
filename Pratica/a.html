@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <title>Scanner de Minerais</title>
+</head>
+<body>
+
+<h1>Scanner de HTML</h1>
+
+<input type="file" id="files" webkitdirectory multiple />
+<pre id="output"></pre>
+
+<script>
+const termos = [
+  "Actinolita",
+  "Amazonita",
+  "Ambliogonita",
+  "Apatita",
+  "Arsenopirita",
+  "Azurita",
+  "Barita",
+  "Berilo",
+  "Goethita"
+];
+
+document.getElementById("files").addEventListener("change", async (event) => {
+  const files = event.target.files;
+  const result = {};
+
+  for (const t of termos) {
+    result[t] = [];
+  }
+
+  for (const file of files) {
+    if (!file.name.endsWith(".html")) continue;
+
+    const text = await file.text();
+
+    for (const termo of termos) {
+      if (text.includes(termo)) {
+        result[termo].push(file.webkitRelativePath || file.name);
+      }
+    }
+  }
+
+  let output = "";
+
+  for (const [termo, lista] of Object.entries(result)) {
+    output += `\n=== ${termo} ===\n`;
+    output += lista.length ? lista.join("\n") : "Não encontrado";
+    output += "\n";
+  }
+
+  document.getElementById("output").textContent = output;
+});
+</script>
+
+</body>
+</html>
