@@ -1,289 +1,210 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="pt-BR">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
     <title>Mineralab</title>
 
     <!-- Favicon -->
-    <link rel="icon" href="/Src/favicon.svg" type="image/x-icon">
+    <link rel="icon" href="/Src/favicon.svg" type="image/x-icon" />
 
     <!-- Fonte Rubik -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-        href="https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;700&display=swap"
-        rel="stylesheet">
+      href="https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;700&display=swap"
+      rel="stylesheet"
+    />
 
     <!-- CSS -->
-    <link rel="stylesheet" href="/Styles/asst.css">
+    <link rel="stylesheet" href="/Styles/asst.css" />
 
     <link
       rel="stylesheet"
       type="text/css"
       href="https://cdn.jsdelivr.net/npm/@phosphor-icons/web@2.1.1/src/bold/style.css"
     />
+  </head>
 
-</head>
-
-<body>
-
-
+  <body>
     <!-- SIDEBAR -->
     <div id="sidebar" class="sidebar">
-
-        <header class="hero-min">
-
-            <div class="hero-content">
-
-                <div class="hero-text">
-                    <div>
-                        <h3>Menu</h3>
-                        <p>Opções de navegação</p>
-                    </div>
-
-                        <div id="closeSidebar" class="circle"> <i class="ph-bold ph-x"></i> </div>
-                </div>
-
+      <header class="hero-min">
+        <div class="hero-content">
+          <div class="hero-text">
+            <div>
+              <h3>Menu</h3>
+              <p>Opções de navegação</p>
             </div>
 
-        </header>
+            <div id="closeSidebar" class="circle">
+              <i class="ph-bold ph-x"></i>
+            </div>
+          </div>
+        </div>
+      </header>
 
-        <!-- AÇÕES -->
-            <section class="actions-section">
-
-                <div class="hero-text-bottom-grid">
-
-
-                        <a id="toggle-theme" class="btn"> <i class="ph-bold ph-circle-half"></i> Contraste </a>
-                        <a href="/Inicio.html" class="btn"> <i class="ph-bold ph-house"></i> Página inicial </a>
-                        <a href="/Feedback.html" class="btn"> <i class="ph-bold ph-chat-centered-text"></i> Feedbacks </a>
-                        <a href="https://ufpa.br/orgaos/faculdade-de-geologia/" class="btn" target="_blank" rel="noopener noreferrer"> <i class="ph-bold ph-flask"></i> Laboratório </a>
-                        <a href="/Sobre.html" class="btn"> <i class="ph-bold ph-info"></i> Projeto </a>
-
-                    
-                </div>
-
-            </section>
-
-        
-    
-
-
+      <!-- AÇÕES -->
+      <section class="actions-section">
+        <div class="hero-text-bottom-grid">
+          <a id="toggle-theme" class="btn">
+            <i class="ph-bold ph-circle-half"></i> Contraste
+          </a>
+          <a href="/Inicio.html" class="btn">
+            <i class="ph-bold ph-house"></i> Página inicial
+          </a>
+          <a href="/Feedback.html" class="btn">
+            <i class="ph-bold ph-chat-centered-text"></i> Feedbacks
+          </a>
+          <a
+            href="https://ufpa.br/orgaos/faculdade-de-geologia/"
+            class="btn"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <i class="ph-bold ph-flask"></i> Laboratório
+          </a>
+          <a href="/Sobre.html" class="btn">
+            <i class="ph-bold ph-info"></i> Projeto
+          </a>
+        </div>
+      </section>
     </div>
-
-
-
-
-
-
-
-
-
 
     <div class="container">
-
-        <!-- CABEÇALHO -->
-        <header class="hero-min">
-
-            <div class="hero-content">
-
-                <div class="hero-text">
-                    <div>
-                        <h3>Assistente</h3>
-                        <p>inteligência artificial</p>
-                    </div>
-
-                        <div id="openSidebar" class="circle"> <i class="ph-bold ph-list"></i> </div>
-                </div>
-
+      <!-- CABEÇALHO -->
+      <header class="hero-min">
+        <div class="hero-content">
+          <div class="hero-text">
+            <div>
+              <h3>Assistente</h3>
+              <p>inteligência artificial</p>
             </div>
 
-        </header>
+            <div id="openSidebar" class="circle">
+              <i class="ph-bold ph-list"></i>
+            </div>
+          </div>
+        </div>
+      </header>
 
-        <!-- CONTEÚDO PRINCIPAL -->
-        <main class="main-content">
+      <!-- CONTEÚDO PRINCIPAL -->
+      <main class="main-content">
+        <section class="welcome-card-section">
+          <div class="welcome-card-pt">
+            <div class="hero-card">
+              <input id="prompt" id="texto" placeholder="Digite aqui..." />
+            </div>
+          </div>
+        </section>
 
-            <section class="welcome-card-section">
+        <section class="actions-section">
+          <div class="hero-text-bottom">
+            <div class="hero-text-circlenex">
+              <input
+                type="file"
+                id="cameraInput"
+                accept="image/*"
+                capture="environment"
+                style="display: none"
+              />
 
-                <div class="welcome-card-pt">
+              <!-- Input para qualquer arquivo -->
+              <input type="file" id="fileInput" style="display: none" />
 
-                    <div class="hero-card">
-                        <input id="prompt" id="texto" placeholder="Digite aqui..."/>
-                    </div>
+              <button
+                style="display: none"
+                type="button"
+                class="circle"
+                onclick="document.getElementById('cameraInput').click()"
+              >
+                <i class="ph-bold ph-camera"></i>
+              </button>
 
-                
+              <button
+                style="display: none"
+                type="button"
+                class="circle"
+                onclick="document.getElementById('fileInput').click()"
+              >
+                <i class="ph-bold ph-paperclip"></i>
+              </button>
+            </div>
 
-                </div>
+            <button onclick="enviar()" href="" class="circle-btn-sim">
+              <i class="ph-bold ph-arrow-up"></i>
+            </button>
+          </div>
+        </section>
 
-            </section>
+        <section class="welcome-card-section">
+          <article class="welcome-card-tr">
+            <div id="resposta">Aguardando resposta</div>
+          </article>
+        </section>
 
-            <section class="actions-section">
-
-                <div class="hero-text-bottom">
-                    <div class="hero-text-circlenex">
-
-
-                        
-<input
-    type="file"
-    id="cameraInput"
-    accept="image/*"
-    capture="environment"
-    style="display:none;"
->
-
-
-<!-- Input para qualquer arquivo -->
-<input
-    type="file"
-    id="fileInput"
-    style="display:none;"
->
-
-
-<button style="display: none;" type="button" class="circle" onclick="document.getElementById('cameraInput').click()">
-    <i class="ph-bold ph-camera"></i>
-</button>
-
-<button style="display: none;" type="button" class="circle" onclick="document.getElementById('fileInput').click()">
-    <i class="ph-bold ph-paperclip"></i>
-</button>
-
-
-
-                        
-                    </div>
-
-                        <button onclick="enviar()" href="" class="circle-btn-sim"> <i class="ph-bold ph-arrow-up"></i> </button>
-
-                </div>
-
-            </section>
-
-
-            <section class="welcome-card-section">
-                <article class="welcome-card-tr">
-
-
-                    <div id="resposta"> </div>
-
-                </article>
-
-            </section>
-
-
-
-
-
-            <!-- AÇÕES -->
-            <section class="actions-section">
-
-                
-
-            </section>
-
-
-
-        </main>
-
-        
-
+        <!-- AÇÕES -->
+        <section class="actions-section"></section>
+      </main>
     </div>
 
+    <script>
+      const textarea = document.getElementById("prompt");
 
+      if (textarea) {
+        function ajustarAltura() {
+          textarea.style.height = "160px";
+          textarea.style.height = textarea.scrollHeight + "px";
+        }
 
-
-<script>
-
-const textarea = document.getElementById("prompt");
-
-if (textarea) {
-    function ajustarAltura() {
-        textarea.style.height = "160px";
-        textarea.style.height = textarea.scrollHeight + "px";
-    }
-
-    textarea.addEventListener("input", ajustarAltura);
-    ajustarAltura();
-}
-
-
-
-
-</script>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+        textarea.addEventListener("input", ajustarAltura);
+        ajustarAltura();
+      }
+    </script>
 
     <!-- JS -->
     <script src="/scripts.js" defer></script>
 
+    <!-- Markdown parser -->
+<script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
 
+<script>
+  async function enviar() {
+    const promptEl = document.getElementById("prompt");
+    const resposta = document.getElementById("resposta");
 
-    <script>
-async function enviar(){
+    const prompt = promptEl.value.trim();
 
-    const prompt =
-        document.getElementById("prompt").value;
+    if (!prompt) return;
 
-    if(!prompt) return;
+    // feedback inicial
+    resposta.innerHTML = "<em>Pensando...</em>";
 
-    const resposta =
-        document.getElementById("resposta");
+    try {
+      const req = await fetch("/api/chat", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({ prompt }),
+      });
 
-    resposta.innerText = "Pensando...";
+      if (!req.ok) {
+        throw new Error("Erro na requisição");
+      }
 
-    try{
+      const data = await req.json();
 
-        const req = await fetch("/api/chat",{
-            method:"POST",
-            headers:{
-                "Content-Type":"application/json"
-            },
-            body:JSON.stringify({
-                prompt
-            })
-        });
+      // 🔥 CONVERSÃO MARKDOWN → HTML
+      const html = marked.parse(data.resposta || "");
 
-        const data = await req.json();
-
-        resposta.innerText = data.resposta;
-
-    }catch(e){
-
-        resposta.innerText = "Erro 403";
-
+      resposta.innerHTML = html;
+    } catch (e) {
+      console.error(e);
+      resposta.innerHTML = "<strong>Erro ao obter resposta.</strong>";
     }
-
-}
+  }
 </script>
-
-
-
-
-
-
-    
-
-</body>
-
+  </body>
 </html>
