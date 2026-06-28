@@ -162,6 +162,13 @@ button {
     color: var(--text-primary);
 }
 
+#resposta h3 {
+    margin-block: 2rem 1rem;
+}
+
+
+
+
 .hero-text-fix h3 {
     font-size: 1.2em;
     font-weight: 700;
