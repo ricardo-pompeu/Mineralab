@@ -323,9 +323,8 @@ textarea {
 
 
 .hero-card i {
-    font-size: 48px;
+    font-size: 24px;
     color: var(--text-link);
-    padding-right: 6px;
 }
 
 
