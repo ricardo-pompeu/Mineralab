@@ -1,10 +1,10 @@
 [data-theme="light"] {
     --bg-primary: #f5fbf3;
     --bg-secondary: #e9f0e8;
-    --bg-teary: #d9e6da;
+    --bg-teary: #c2efd0;
 
-    --text-primary: #171d19;
-    --text-secondary: #171d19;
+    --text-primary: #1c1b1b;
+    --text-secondary: #1c1b1b;
     --text-link: #005c38;
 
     --circle-color: #0000000c;
@@ -24,11 +24,10 @@
 [data-theme="dark"] {
     --bg-primary: #0f1511;
     --bg-secondary: #1b211d;
+    --bg-teary: #1d452f;
 
-    --bg-teary: #3e4a41;
-
-    --text-primary: #dee4dd;
-    --text-secondary: #dee4dd;
+    --text-primary: #e2e2e2;
+    --text-secondary: #e2e2e2;
     --text-link: #69dc9d;
 
     --circle-color: #ffffff0c;

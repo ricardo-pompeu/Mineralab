@@ -12,9 +12,13 @@
     font-size: 18px;
 }
 
+html {
+    background: var(--bg-primary)
+}
+
 body {
     min-height: 80vh;
-    font-family: Rubik, sans-serif;
+    font-family: Rubik, Helvetica, sans-serif;
     background: var(--bg-primary);
     justify-content: center;
 }
@@ -36,7 +40,7 @@ body {
 ========================= */
 
 .hero {
-    height: 400px;
+    
     background: var(--bg-secondary);
 }
 
@@ -50,7 +54,7 @@ body {
     height: 100%;
     padding: 12px;
 
-    
+    background: url(/Src/aweifjfnveio.png);
     background-size: cover;
     background-position: center;
 
@@ -64,17 +68,6 @@ body {
     background-color: #00000000;
     padding: 12px;
 }
-
-.hero-text .circle {
-    background: var(--circle-color);
-
-}
-
-
-
-
-
-
 
 .hero-text p {
     margin: 0;
@@ -120,17 +113,53 @@ body {
     gap: 24px;
 }
 
-
-
-.hero-card {
-    background: var(--bg-teary);
+.hero-card-img {
+    background: url(/Src/img-mn1.jpg);
     padding: 24px;
     border-radius: 24px;
-    min-height: 200px;
+    height: 240px;
+
+    background-size: cover;
+  background-position: center;
+
 }
 
 
 
+
+
+
+
+.hero-card {
+    background: var(--bg-secondary);
+    padding: 24px;
+    border-radius: 24px;
+    height: 240px;
+    background-size: cover;
+  background-position: center;
+}
+
+.hero-card-nextpag {
+    background: #c2efd0;
+    padding: 24px;
+    border-radius: 24px;
+    display: flex;
+    color: #29513a;
+    gap: 12px;
+    align-items: center;
+}
+
+
+
+
+
+
+.hero-card-nextpag p, .hero-card-nextpag i  {
+    color: #29513a;
+    margin: 0;
+    display: flex;
+    gap: 12px;
+}
 
 
 
@@ -182,10 +211,10 @@ textarea {
     width: 48px;
     height: 48px;
     border-radius: 50%;
-    background: var(--bg-teary);
+    background: var(--circle-color);
 
     cursor: pointer;
-    transition: all 0.03s ease-in-out;
+    transition: all 0.3s ease;
 
 }
 
@@ -196,32 +225,35 @@ textarea {
 
 
 
-
 #returnUp-fix {
     position: fixed;
-    bottom: 24px;
+    top: 24px;
     right: 24px;
 
     background: var(--btn-sim);
+
+    display: flex;
+
     opacity: 0;
     visibility: hidden;
-    pointer-events: none;
 
-    transition: opacity 0.3s ease, visibility 0.3s ease;
-}
-
-#returnUp-fix i {
-    color: var(--bg-primary);
+    transition: all 0.6s ease-in-out;
 }
 
 #returnUp-fix.show {
     opacity: 1;
     visibility: visible;
-    pointer-events: auto;
+    
+
+    transition: all 0.6s ease-in-out;
 }
 
 
 
+
+#returnUp-fix i {
+    color: var(--bg-primary);
+}
 
 
 
@@ -312,11 +344,11 @@ textarea {
 
 .welcome-section {
     display: flex;
+    flex-direction: column;
     justify-content: center;
 
     padding: 24px;
-    height: 240px;
-
+    gap: 24px;
 }
 
 .welcome-card-section {
@@ -325,7 +357,6 @@ textarea {
     padding: 24px;
     gap: 24px;
 
-    height: 520px;
 
 }
 
@@ -347,16 +378,49 @@ textarea {
 
 .welcome-card-pt {
     text-align: justify;
+    gap: 12px;
+    display: flex;
+     flex-direction: column;
 }
+
+
+.welcome-card-pt .btn {
+    
+    text-align: left;
+  justify-content: left;
+  padding-inline: 24px;
+  color: var(--bg-primary);
+  
+
+}
+
+
+
+
+
+
+
+
+
 
 .welcome-card-tr {
     text-align: justify;
 }
 
+.welcome-card-tr h1 {
+    margin-bottom: 2rem;
+
+}
+
+.welcome-card-tr h3 {
+    margin-block: 2rem 1rem;
+
+}
+
 .welcome-card-progress-bar {
     height: 12px;
     width: 100%;
-    background: var(--bg-teary);
+    background: var(--bg-secondary);
     border-radius: 24px;
 }
 
@@ -374,30 +438,47 @@ textarea {
     border-radius: 24px;
 }
 
-.welcome-card-progress-bar-active-40 {
-    height: 12px;
+.welcome-card-progress-bar-active-30 {
+    height: 6px;
     width: 40%;
     background: var(--text-primary);
     border-radius: 24px;
 }
 
-.welcome-card-progress-bar-active-60 {
-    height: 12px;
-    width: 60%;
+.welcome-card-progress-bar-active-40 {
+    height: 6px;
+    width: 40%;
     background: var(--text-primary);
     border-radius: 24px;
 }
 
-.welcome-card-progress-bar-active-80 {
-    height: 12px;
-    width: 80%;
+.welcome-card-progress-bar-active-40 {
+    height: 6px;
+    width: 40%;
     background: var(--text-primary);
     border-radius: 24px;
 }
 
-.welcome-card-progress-bar-active-90 {
-    height: 12px;
-    width: 90%;
+.welcome-card-progress-bar-active-40 {
+    height: 6px;
+    width: 40%;
+    background: var(--text-primary);
+    border-radius: 24px;
+}
+
+.welcome-card-progress-bar-active-40 {
+    height: 6px;
+    width: 40%;
+    background: var(--text-primary);
+    border-radius: 24px;
+}
+
+
+
+
+.welcome-card-progress-bar-active-40 {
+    height: 6px;
+    width: 40%;
     background: var(--text-primary);
     border-radius: 24px;
 }
@@ -443,19 +524,19 @@ textarea {
     border-radius: 48px;
 
     background: var(--button-color);
-    color: var(--bg-primary);
+    color: var(--text-btn);
     
 
 
 
     cursor: pointer;
-    transition: all 0.1s ease;
+    transition: all 0.3s ease;
 
 }
 
 
 .btn:active {
-    transform: scale(0.9);
+    transform: scale(0.92);
     background-color: var(--button-hover);
 }
 
@@ -547,40 +628,48 @@ select {
 
 
 
-
 table {
     display: flex;
     border-spacing: 0;
     overflow-x: auto; /* Permite rolagem horizontal */
     width: 100%;
-    padding-inline: 36px;
-    padding-bottom: 36px;
+}
+
+tbody {
+    width: 100%;
+}
+
+tr th:last-of-type {
+    width: 100%;
 }
 
 td {
-    background: #e8f0e6;
+    background: var(--bg-teary);
+    color: var(--text-primary);
 }
 
 
 td,
 th {
-  border-block-start: 1px solid #bbcabb;
-  border-inline-start: 1px solid #bbcabb;
+  border-block-start: 1px solid var(--text-secondary);
+  border-inline-start: 1px solid var(--text-secondary);
   padding: 12px;
+  text-align: right;
 }
+
 
 tr:last-of-type td,
 tr:last-of-type th {
-  border-block-end: 1px solid #bbcabb;
+  border-block-end: 1px solid var(--text-secondary);
 }
 
 tr td:last-of-type,
 tr th:last-of-type {
-  border-inline-end: 1px solid #bbcabb;
+  border-inline-end: 1px solid var(--text-secondary);
 }
 
 th {
-  background-color: var(--bg-secondary);
+  background-color: var(--bg-teary);
   color: var(--text-primary);
   font-size: 1.2em;
 }
@@ -660,7 +749,6 @@ tr:last-of-type td:last-of-type {
 
 
 
-
 .sidebar .btn {
     align-self: flex-end;
 }
@@ -694,8 +782,6 @@ tr:last-of-type td:last-of-type {
     color: var(--text-primary);
 
 }
-
-
 
 
 
