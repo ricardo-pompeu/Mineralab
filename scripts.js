@@ -55,27 +55,36 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
 
-document.addEventListener("DOMContentLoaded", () => {
+function applyTheme(theme) {
+    document.documentElement.setAttribute("data-theme", theme);
+    localStorage.setItem("theme", theme);
+}
+
+function initTheme() {
     const root = document.documentElement;
 
-    // 🌙 Aplica tema salvo (ou padrão light)
+    // aplica tema salvo SEMPRE que a página aparece
     const savedTheme = localStorage.getItem("theme") || "light";
     root.setAttribute("data-theme", savedTheme);
 
-    // 🔧 Função central de aplicação de tema
-    function applyTheme(theme) {
-        root.setAttribute("data-theme", theme);
-        localStorage.setItem("theme", theme);
-    }
-
-    // 🔘 Toggle automático (se existir botão na página)
     const toggleThemeButton = document.getElementById("toggle-theme");
 
-    if (toggleThemeButton) {
-        toggleThemeButton.addEventListener("click", () => {
+    if (toggleThemeButton && !toggleThemeButton.dataset.bound) {
+        toggleThemeButton.dataset.bound = "true";
+
+        toggleThemeButton.addEventListener("click", (e) => {
+            e.preventDefault(); // importante por ser <a>
+
             const currentTheme = root.getAttribute("data-theme");
             const newTheme = currentTheme === "dark" ? "light" : "dark";
+
             applyTheme(newTheme);
         });
     }
-});
+}
+
+// primeira carga
+document.addEventListener("DOMContentLoaded", initTheme);
+
+// voltar do histórico (SEM F5 também funciona)
+window.addEventListener("pageshow", initTheme);
