@@ -1,0 +1,177 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Mineralab</title>
+
+    <!-- Favicon -->
+    <link rel="icon" href="/Src/favicon.svg" type="image/x-icon" />
+
+    <!-- Fonte Rubik -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="/Styles/asst.css" />
+
+    <script type="module" src="/scripts.js"></script>
+
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://cdn.jsdelivr.net/npm/@phosphor-icons/web@2.1.1/src/bold/style.css"
+    />
+
+    
+
+
+
+  </head>
+
+  <body>
+    <!-- SIDEBAR -->
+
+    <site-sidebar></site-sidebar>
+
+    <div class="container">
+      <!-- CABEÇALHO -->
+      <header class="hero-min">
+        <div class="hero-content">
+          <div class="hero-text">
+            <div>
+              <h3>Assistente</h3>
+              <p>inteligência artificial</p>
+            </div>
+
+            <div id="openSidebar" class="circle">
+              <i data-lucide="menu"></i>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <!-- CONTEÚDO PRINCIPAL -->
+      <main class="main-content">
+        <section class="welcome-card-section">
+          <div class="welcome-card-pt">
+            <div class="hero-card">
+              <textarea
+                id="prompt"
+                id="texto"
+                placeholder="Digite aqui..."
+              ></textarea>
+            </div>
+          </div>
+        </section>
+
+        <section class="actions-section">
+          <div class="hero-text-bottom">
+            <div class="hero-text-circlenex">
+              <input
+                type="file"
+                id="cameraInput"
+                accept="image/*"
+                capture="environment"
+                style="display: none"
+              />
+
+              <!-- Input para qualquer arquivo -->
+              <input type="file" id="fileInput" style="display: none" />
+
+              <button
+                type="button"
+                class="circle"
+                onclick="document.getElementById('cameraInput').click()"
+              >
+                <i data-lucide="camera"></i>
+              </button>
+
+              <button
+                type="button"
+                class="circle"
+                onclick="document.getElementById('fileInput').click()"
+              >
+                <i data-lucide="paperclip"></i>
+              </button>
+            </div>
+
+            <button onclick="enviar()" href="" class="circle-btn-sim">
+              <!-- Your HTML file -->
+              <i data-lucide="menu"></i>
+            </button>
+          </div>
+        </section>
+
+        <section class="welcome-card-section">
+          <article class="welcome-card-tr">
+            <div id="resposta"></div>
+          </article>
+        </section>
+
+        <!-- AÇÕES -->
+        <section class="actions-section"></section>
+      </main>
+    </div>
+
+    <script>
+      const textarea = document.getElementById("prompt");
+
+      if (textarea) {
+        function ajustarAltura() {
+          textarea.style.height = "160px";
+          textarea.style.height = textarea.scrollHeight + "px";
+        }
+
+        textarea.addEventListener("input", ajustarAltura);
+        ajustarAltura();
+      }
+    </script>
+
+    <!-- JS -->
+    <script src="/scripts.js" defer></script>
+
+    <script>
+      async function enviar() {
+        const prompt = document.getElementById("prompt").value;
+
+        if (!prompt) return;
+
+        const resposta = document.getElementById("resposta");
+
+        resposta.innerText = "Pensando...";
+
+        try {
+          const req = await fetch("/api/chat", {
+            method: "POST",
+            headers: {
+              "Content-Type": "application/json",
+            },
+            body: JSON.stringify({
+              prompt,
+            }),
+          });
+
+          const data = await req.json();
+
+          resposta.innerText = data.resposta;
+        } catch (e) {
+          resposta.innerText = "Erro 403";
+        }
+      }
+    </script>
+
+    <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
+
+<script>
+  lucide.createIcons();
+</script>
+
+    
+  </body>
+</html>
