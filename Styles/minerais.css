@@ -61,6 +61,11 @@ body {
 
 }
 
+.hero-content .circle {
+    background: var(--circle-color);
+}
+
+
 .hero-text {
     display: flex;
     justify-content:space-between;
@@ -98,6 +103,13 @@ body {
     justify-content: space-between;
 }
 
+.hero-text-nav {
+    display: flex;
+
+    padding-block: 24px;
+    justify-content: space-between;
+}
+
 .hero-text-bottom-grid {
     display: flex;
     flex-direction: column;
@@ -131,13 +143,9 @@ body {
 
 
 .hero-card {
+    display: flex;
     background: var(--bg-secondary);
-    padding: 24px;
     border-radius: 24px;
-    height: 240px;
-    background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
 }
 
 .hero-card-nextpag {
@@ -212,7 +220,7 @@ textarea {
     width: 48px;
     height: 48px;
     border-radius: 50%;
-    background: var(--circle-color);
+    background: var(--bg-secondary);
 
     cursor: pointer;
     transition: all 0.3s ease;
@@ -355,7 +363,6 @@ textarea {
 .welcome-card-section {
     display: flex;
     flex-direction: column;
-    padding: 24px;
     gap: 24px;
 
 
@@ -506,9 +513,6 @@ textarea {
    ACTIONS SECTION
 ========================= */
 
-.actions-section {
-    padding-inline: 12px;
-}
 
 .btn {
     display: flex;
@@ -786,10 +790,5 @@ tr:last-of-type td:last-of-type {
 
 
 
-
-
-
-
-/*------------------------------------------------------------------------------*/
 
 

@@ -1,200 +1,320 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="pt-BR">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
     <title>Mineralab</title>
 
     <!-- Favicon -->
-    <link rel="icon" href="../Src/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="../Src/favicon.ico" type="image/x-icon" />
 
     <!-- Fonte Rubik -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-        href="https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;700&display=swap"
-        rel="stylesheet">
+      href="https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;700&display=swap"
+      rel="stylesheet"
+    />
 
     <!-- CSS -->
-    <link rel="stylesheet" href="/Styles/minerais.css">
+    <link rel="stylesheet" href="/Styles/minerais.css" />
 
     <link
       rel="stylesheet"
       type="text/css"
       href="https://cdn.jsdelivr.net/npm/@phosphor-icons/web@2.1.1/src/bold/style.css"
     />
-
-</head>
-
-<body>
+  </head>
 
 
+  <style>
 
+
+.carousel{
+    width: 100%;
+    overflow:hidden;
+    padding: 24px;
+    
+}
+
+/* Contêiner que desliza */
+.slides{
+    display:flex;
+    transition: transform .6s ease-in-out;
+    gap: 96px;
+}
+
+/* Cada slide ocupa 100% da largura */
+.slide{
+    min-width:100%;
+}
+
+.slide img{
+    width:100%;
+    height:300px;
+    border-radius: 24px;
+    object-fit:cover;
+}
+
+
+
+button{
+    position:absolute;
+    top:90%;
+    transform:translateY(-50%);
+    width:45px;
+    height:45px;
+    border:none;
+    border-radius:50%;
+    background:rgba(0,0,0,.5);
+    color:#fff;
+    font-size:22px;
+    cursor:pointer;
+}
+
+.prev{
+    left:15px;
+}
+
+.next{
+    right:15px;
+}
+
+button:hover{
+    background:#000;
+}
+</style>
+
+
+
+
+
+  <body>
     <!-- SIDEBAR -->
     <div id="sidebar" class="sidebar">
-
-        <header class="hero-min">
-
-            <div class="hero-content">
-
-                <div class="hero-text">
-                    <div>
-                        <h3>Menu</h3>
-                        <p>Opções de navegação</p>
-                    </div>
-
-                        <div id="closeSidebar" class="circle"> <i class="ph-bold ph-x"></i> </div>
-                </div>
-
+      <header class="hero-min">
+        <div class="hero-content">
+          <div class="hero-text">
+            <div>
+              <h3>Menu</h3>
+              <p>Opções de navegação</p>
             </div>
 
-        </header>
+            <div id="closeSidebar" class="circle">
+              <i class="ph-bold ph-x"></i>
+            </div>
+          </div>
+        </div>
+      </header>
 
-        <!-- AÇÕES -->
+      <!-- AÇÕES -->
+      <section class="actions-section">
+        <div class="hero-text-bottom-grid">
+          <a id="toggle-theme" class="btn">
+            <i class="ph-bold ph-circle-half"></i> Contraste
+          </a>
+          <a href="/Inicio.html" class="btn">
+            <i class="ph-bold ph-house"></i> Página inicial
+          </a>
+          <a href="/Feedback.html" class="btn">
+            <i class="ph-bold ph-chat-centered-text"></i> Feedbacks
+          </a>
+          <a
+            href="https://ufpa.br/orgaos/faculdade-de-geologia/"
+            class="btn"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <i class="ph-bold ph-flask"></i> Laboratório
+          </a>
+          <a href="/Sobre.html" class="btn">
+            <i class="ph-bold ph-info"></i> Projeto
+          </a>
+        </div>
+      </section>
+    </div>
+
+    <div class="container">
+      <!-- CABEÇALHO -->
+      <header class="hero">
+        <div class="hero-content">
+          <div class="hero-text">
+            <div>
+              <h3>Minerais</h3>
+              <p>Arsenopirita</p>
+            </div>
+
+            <div id="openSidebar" class="circle">
+              <i class="ph-bold ph-list"></i>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <!-- CONTEÚDO PRINCIPAL -->
+      <main class="main-content">
+        <div id="returnUp-fix" class="circle fix-pagersup">
+          <i class="ph-bold ph-arrow-up"></i>
+        </div>
+
+        <!-- APRESENTAÇÃO -->
+
+        
+
+
+          <div class="carousel">
+            <div class="slides">
+              <div class="slide">
+                <div class="hero-card"> 
+                    <img src="/Src/Minerais/Arsenopirita.png" />
+                </div>
+                
+              </div>
+
+              <div class="slide">
+                <div class="hero-card"> 
+                    <img src="/Src/Minerais/Arsenopirita.png" />
+                </div>
+                
+              </div>
+
+              <div class="slide">
+                <div class="hero-card"> 
+                    <img src="/Src/Minerais/Arsenopirita.png" />
+                </div>
+                
+              </div>
+
+              <div class="slide">
+                <div class="hero-card"> 
+                    <img src="/Src/Minerais/Arsenopirita.png" />
+                </div>
+                
+              </div>
+            </div>
+
             <section class="actions-section">
 
-                <div class="hero-text-bottom-grid">
+                <div class="hero-text-nav">
 
+                    <div class="hero-content-nav-bottom">
 
-                        <a id="toggle-theme" class="btn"> <i class="ph-bold ph-circle-half"></i> Contraste </a>
-                        <a href="/Inicio.html" class="btn"> <i class="ph-bold ph-house"></i> Página inicial </a>
-                        <a href="/Feedback.html" class="btn"> <i class="ph-bold ph-chat-centered-text"></i> Feedbacks </a>
-                        <a href="https://ufpa.br/orgaos/faculdade-de-geologia/" class="btn" target="_blank" rel="noopener noreferrer"> <i class="ph-bold ph-flask"></i> Laboratório </a>
-                        <a href="/Sobre.html" class="btn"> <i class="ph-bold ph-info"></i> Projeto </a>
+                        <a class="prev circle"> <i class="ph-bold ph-arrow-left"></i> </a>
+                        <a class="next circle"> <i class="ph-bold ph-arrow-right"></i> </a>
 
+                    </div>
+
+                    <a href="/Src/Minerais/Arsenopirita.png" class="circle"> <i class="ph-bold ph-magnifying-glass"></i> </a>
                     
+
                 </div>
 
             </section>
 
-        
-    
 
-
-    </div>
-
-
-
-
-
-
-
-
-
-
-    <div class="container">
-
-        <!-- CABEÇALHO -->
-        <header class="hero">
-
-            <div class="hero-content">
-
-                <div class="hero-text">
-                    <div>
-                        <h3>Minerais</h3>
-                        <p>Arsenopirita</p>
-                    </div>
-
-                        <div id="openSidebar" class="circle"> <i class="ph-bold ph-list"></i> </div>
-                </div>
-
-            </div>
-
-        </header>
-
-        <!-- CONTEÚDO PRINCIPAL -->
-        <main class="main-content">
-
-            <div id="returnUp-fix" class="circle fix-pagersup"> <i class="ph-bold ph-arrow-up"></i> </div>
-
-            <!-- APRESENTAÇÃO -->
-
-            <section class="welcome-card-section">
-          <div class="welcome-card-pt">
-            <div class="hero-card" style="background-image: url('/Src/Minerais/Arsenopirita.png');">
-              <div class="hero-card-text">
-                
-              </div>
-              
-            </div>
           </div>
 
+
         
+
+        <section class="welcome-section">
+          <article class="welcome-card-tr">
+            <h1>Arsenopirita</h1>
+
+            <p>
+              A Arsenopirita é o mais comum dos minerais de arsênio e um
+              importante sulfoarseneto de ferro, sendo a principal fonte
+              comercial desse elemento químico.
+            </p>
+
+            <h3>1. Identificação e Cristalografia</h3>
+            <p>Fórmula Química: FeAsS</p>
+            <p>Sistema Cristalino: Monoclínico</p>
+            <p>Dureza: 5½ a 6 na escala de Mohs</p>
+            <p>Densidade: Aproximadamente 6,07 g/cm3</p>
+            <p>Traço: Preto.</p>
+
+            <h3>2. Propriedades Ópticas e Morfologia</h3>
+            <p>
+              Cor: Branco-prateado a cinza-aço; as superfícies expostas podem
+              apresentar uma pátina amarelada ou iridescente.
+            </p>
+            <p>Brilho: Metálico.</p>
+            <p>
+              Hábito: Frequentemente ocorre em cristais prismáticos alongados
+              com faces estriadas; também é encontrada em agregados maciços,
+              granulares ou colunares.
+            </p>
+
+            <h3>3. Formação e Contexto Geológico</h3>
+            <p>
+              Gênese: Forma-se tipicamente em veios hidrotermais de alta
+              temperatura, em pegmatitos e em depósitos de metamorfismo de
+              contato.
+            </p>
+            <p>
+              Ocorrência: É comumente associada a outros sulfetos como pirita,
+              calcopirita e galena, além de minerais de estanho (cassiterita),
+              tungstênio (wolframita) e ouro nativo.
+            </p>
+            <p>
+              Substituições: O Cobalto (Co) pode substituir parcialmente o ferro
+              (Fe) em sua estrutura, existindo uma transição gradual para a
+              variedade conhecida como danaíta (rica em cobalto).
+            </p>
+
+            <p>
+              Curiosidade: Uma das formas mais rápidas de identificar a
+              arsenopirita em campo é através do olfato: quando o mineral é
+              golpeado com um martelo ou aquecido, ele libera um forte e
+              característico odor de alho, resultante da liberação de vapores de
+              arsênio.
+            </p>
+
+            <p></p>
+          </article>
+
+          <div class="hero-card-img" style="display: none"></div>
         </section>
-
-
-
-
-            <section class="welcome-section">
-
-                <article class="welcome-card-tr">
-
-                    <h1>Arsenopirita</h1>
-
-
-                    <p>A Arsenopirita é o mais comum dos minerais de arsênio e um importante sulfoarseneto de ferro, sendo a principal fonte comercial desse elemento químico.</p>
-
-<h3>1. Identificação e Cristalografia</h3>
-<p>Fórmula Química: FeAsS</p>
-<p>Sistema Cristalino: Monoclínico</p>
-<p>Dureza: 5½ a 6 na escala de Mohs</p>
-<p>Densidade: Aproximadamente 6,07 g/cm3</p>
-<p>Traço: Preto.</p>
-
-<h3>2. Propriedades Ópticas e Morfologia</h3>
-<p>Cor: Branco-prateado a cinza-aço; as superfícies expostas podem apresentar uma pátina amarelada ou iridescente.</p>
-<p>Brilho: Metálico.</p>
-<p>Hábito: Frequentemente ocorre em cristais prismáticos alongados com faces estriadas; também é encontrada em agregados maciços, granulares ou colunares.</p>
-
-<h3>3. Formação e Contexto Geológico</h3>
-<p>Gênese: Forma-se tipicamente em veios hidrotermais de alta temperatura, em pegmatitos e em depósitos de metamorfismo de contato.</p>
-<p>Ocorrência: É comumente associada a outros sulfetos como pirita, calcopirita e galena, além de minerais de estanho (cassiterita), tungstênio (wolframita) e ouro nativo.</p>
-<p>Substituições: O Cobalto (Co) pode substituir parcialmente o ferro (Fe) em sua estrutura, existindo uma transição gradual para a variedade conhecida como danaíta (rica em cobalto).</p>
-
-<p>Curiosidade: Uma das formas mais rápidas de identificar a arsenopirita em campo é através do olfato: quando o mineral é golpeado com um martelo ou aquecido, ele libera um forte e característico odor de alho, resultante da liberação de vapores de arsênio.</p>
-
-
-                    
-
-                    
-                    <p>
-
-                        
-                    </p>
-
-
-
-
-
-                </article>
-
-
-                    <div class="hero-card-img" style="display: none;"></div>
-                        
-                    
-
-
-
-                    
-
-</section>
-
-
-        </main>
-
-        
-
+      </main>
     </div>
-
-
-
-
 
     <!-- JS -->
     <script src="/scripts.js" defer></script>
 
-</body>
+    <script>
+const slides = document.querySelector(".slides");
+const total = document.querySelectorAll(".slide").length;
 
+let index = 0;
+let auto;
+
+function update() {
+    slides.style.transform = `translateX(calc(-${index} * (100% + 96px)))`;
+}
+
+function next(){
+    index = (index + 1) % total;
+    update();
+}
+
+function prev(){
+    index = (index - 1 + total) % total;
+    update();
+}
+
+document.querySelector(".next").onclick = () => {
+    next();
+};
+
+document.querySelector(".prev").onclick = () => {
+    prev();
+};
+
+</script>
+
+
+
+  </body>
 </html>

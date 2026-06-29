@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Carrossel</title>
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, Helvetica, sans-serif;
+}
+
+body{
+    background:#f2f2f2;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    height:100vh;
+}
+
+.carousel{
+    position:relative;
+    width: 100%;
+    overflow:hidden;
+    padding: 24px;
+    
+}
+
+/* Contêiner que desliza */
+.slides{
+    display:flex;
+    transition:transform .6s ease;
+    gap: 96px;
+}
+
+/* Cada slide ocupa 100% da largura */
+.slide{
+    min-width:100%;
+}
+
+.slide img{
+    width:100%;
+    height:400px;
+    object-fit:cover;
+    display:block;
+}
+
+.content{
+    padding:25px;
+}
+
+.content h1{
+    margin-bottom:10px;
+}
+
+.content p{
+    color:#666;
+}
+
+button{
+    position:absolute;
+    top:90%;
+    transform:translateY(-50%);
+    width:45px;
+    height:45px;
+    border:none;
+    border-radius:50%;
+    background:rgba(0,0,0,.5);
+    color:#fff;
+    font-size:22px;
+    cursor:pointer;
+}
+
+.prev{
+    left:15px;
+}
+
+.next{
+    right:15px;
+}
+
+button:hover{
+    background:#000;
+}
+</style>
+
+</head>
+<body>
+
+<div class="carousel">
+
+    <div class="slides">
+
+        <div class="slide">
+            <img src="https://picsum.photos/800/400?1">
+            <div class="content">
+                <h1>Título 1</h1>
+                <p>Texto da primeira imagem.</p>
+            </div>
+        </div>
+
+        <div class="slide">
+            <img src="https://picsum.photos/800/400?2">
+            <div class="content">
+                <h1>Título 2</h1>
+                <p>Texto da segunda imagem.</p>
+            </div>
+        </div>
+
+        <div class="slide">
+            <img src="https://picsum.photos/800/400?3">
+            <div class="content">
+                <h1>Título 3</h1>
+                <p>Texto da terceira imagem.</p>
+            </div>
+        </div>
+
+        <div class="slide">
+            <img src="https://picsum.photos/800/400?4">
+            <div class="content">
+                <h1>Título 3</h1>
+                <p>Texto da terceira imagem.</p>
+            </div>
+        </div>
+
+    </div>
+
+    <button class="prev">&#10094;</button>
+    <button class="next">&#10095;</button>
+
+</div>
+
+<script>
+const slides = document.querySelector(".slides");
+const total = document.querySelectorAll(".slide").length;
+
+let index = 0;
+let auto;
+
+function update() {
+    slides.style.transform = `translateX(calc(-${index} * (100% + 96px)))`;
+}
+
+function next(){
+    index = (index + 1) % total;
+    update();
+}
+
+function prev(){
+    index = (index - 1 + total) % total;
+    update();
+}
+
+document.querySelector(".next").onclick = () => {
+    next();
+};
+
+document.querySelector(".prev").onclick = () => {
+    prev();
+};
+
+</script>
+
+</body>
+</html>
